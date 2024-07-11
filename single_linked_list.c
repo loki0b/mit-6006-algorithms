@@ -4,18 +4,18 @@
 // sequence implemented as single linked list
 typedef struct s_l linked_list;
 typedef struct n node;
-linked_list* new_linked_list();
-node* new_node(node *next, int element);
-int get_at(linked_list *s_l, int i);
-void set_at(linked_list *s_l, int i, int x);
-void insert_at(linked_list *s_l, int i, int x);
-void delete_at(linked_list *s_l, int i);
-void insert_first(linked_list *s_l, int x);
-void delete_first(linked_list *s_l);
-void insert_last(linked_list *s_l, int x);
-void delete_last(linked_list *s_l);
-void move_cursor(linked_list *s_l, int i);
-int length(linked_list *s_l);
+linked_list* new_linked_list(); // O(1)
+node* new_node(node *next, int element); // O(1)
+int get_at(linked_list *s_l, int i); // O(n)
+void set_at(linked_list *s_l, int i, int x); // O(n)
+void insert_at(linked_list *s_l, int i, int x); // O(n)
+void delete_at(linked_list *s_l, int i); // O(n)
+void insert_first(linked_list *s_l, int x); // O(1)
+void delete_first(linked_list *s_l); // O(1)
+void insert_last(linked_list *s_l, int x); // O(1) <- its O(n) if does not have the tail
+void delete_last(linked_list *s_l); // O(1) <- its O(n) if does not have the tail
+void move_cursor(linked_list *s_l, int i); // O(n)
+int length(linked_list *s_l); // O(1)
 
 typedef struct s_l {
     node *head;
