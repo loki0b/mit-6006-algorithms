@@ -14,7 +14,7 @@ void insert_last(static_array *s_a, int x);
 void delete_last(static_array *s_a);
 void insert_resize(static_array *s_a);
 void delete_resize(static_array *s_a);
-int length(static_array *s_p);
+int length(static_array *s_a);
 
 typedef struct s_a {
     int size;
