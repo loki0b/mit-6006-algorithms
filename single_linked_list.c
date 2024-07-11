@@ -29,6 +29,7 @@ typedef struct n {
     struct n *next;
 } node;
 
+// create a new single linked list data structre
 linked_list* new_linked_list() {
     linked_list *s_l;
 
@@ -42,6 +43,7 @@ linked_list* new_linked_list() {
     return s_l;
 }
 
+// create a new node with an element and a pointer to another node
 node* new_node(node *next, int element) {
     node *n;
 
