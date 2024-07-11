@@ -12,8 +12,9 @@ void insert_first(static_array *s_a, int x);
 void delete_first(static_array *s_a);
 void insert_last(static_array *s_a, int x);
 void delete_last(static_array *s_a);
-void insert_resize(static_array *s_a); // helper function
-void delete_resize(static_array *s_a); // helper function
+void insert_resize(static_array *s_a);
+void delete_resize(static_array *s_a);
+int length(static_array *s_p);
 
 typedef struct s_a {
     int size;
@@ -126,4 +127,8 @@ void insert_last(static_array *s_a, int x) {
 // delete the last element of the sequence
 void delete_last(static_array *s_a) {
     delete_at(s_a, s_a->size - 1);
+}
+
+int length(static_array *s_p) {
+    return s_p->size;
 }
