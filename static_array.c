@@ -3,18 +3,18 @@
 
 // sequence implemented as static array
 typedef struct s_a static_array;
-static_array* new_static_array(int size);
-int get_at(static_array *s_a, int i);
-void set_at(static_array *s_a, int i, int x);
-void insert_at(static_array *s_a, int i, int x);
-void delete_at(static_array *s_a, int i);
-void insert_first(static_array *s_a, int x);
-void delete_first(static_array *s_a);
-void insert_last(static_array *s_a, int x);
-void delete_last(static_array *s_a);
-void insert_resize(static_array *s_a);
-void delete_resize(static_array *s_a);
-int length(static_array *s_a);
+static_array* new_static_array(int size); // O(n)
+int get_at(static_array *s_a, int i); // O(1)
+void set_at(static_array *s_a, int i, int x); // O(1)
+void insert_at(static_array *s_a, int i, int x); // O(n)
+void delete_at(static_array *s_a, int i); // O(n)
+void insert_first(static_array *s_a, int x); // O(n)
+void delete_first(static_array *s_a); // O(n)
+void insert_last(static_array *s_a, int x); // O(n)
+void delete_last(static_array *s_a); // O(n)
+void insert_resize(static_array *s_a); // O(n)
+void delete_resize(static_array *s_a); // O(n)
+int length(static_array *s_a); // O(1)
 
 typedef struct s_a {
     int size;
