@@ -23,6 +23,7 @@ typedef struct s_a {
 
 // create a new static array data structure
 // the user will need input the n elements in the array to build
+// assumes n > 0
 static_array* new_static_array(int size) {
     static_array *s_a;
 
@@ -32,6 +33,10 @@ static_array* new_static_array(int size) {
     }
     s_a->size = size;
     s_a->sequence = (int*) malloc(sizeof(int) * size);
+    if (s_a->sequence == NULL) {
+        free(s_a);
+        return NULL;
+    }
     for (int i = 0; i < size; i++) {
         scanf("%d", &(s_a->sequence[i]));
     }
