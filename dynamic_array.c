@@ -62,20 +62,18 @@ void set_at(dynamic_array *d_a, int i, int x) {
 // insert an element at the i-th position
 // if the array is full then resize
 void insert_at(dynamic_array *d_a, int i, int x) {
-    if (i >= 0) {
-        if (d_a->length == d_a->size) {
-            array_resize(d_a);
-        }
-        int aux_i;
-
-        aux_i = d_a->length;
-        while (aux_i > i) {
-            d_a->sequence[aux_i] = d_a->sequence[aux_i - 1]; // shift right
-            aux_i--;
-        }
-        d_a->sequence[i] = x;
-        d_a->length++;
+    if (d_a->length == d_a->size) {
+        array_resize(d_a);
     }
+    int aux_i;
+
+    aux_i = d_a->length;
+    while (aux_i > i) {
+        d_a->sequence[aux_i] = d_a->sequence[aux_i - 1]; // shift right
+        aux_i--;
+    }
+    d_a->sequence[i] = x;
+    d_a->length++;
 }
 
 // delete an element at the i-th posistion
