@@ -12,8 +12,8 @@ void insert_at(linked_list *s_l, int i, int x); // O(n)
 void delete_at(linked_list *s_l, int i); // O(n)
 void insert_first(linked_list *s_l, int x); // O(1)
 void delete_first(linked_list *s_l); // O(1)
-void insert_last(linked_list *s_l, int x); // O(1) <- its O(n) if does not have the tail
-void delete_last(linked_list *s_l); // O(1) <- its O(n) if does not have the tail
+void insert_last(linked_list *s_l, int x); // O(1) <- its O(n) if does not have the tail pointer
+void delete_last(linked_list *s_l); // O(1) <- its O(n) if does not have the tail pointer
 void move_cursor(linked_list *s_l, int i); // O(n)
 int length(linked_list *s_l); // O(1)
 
